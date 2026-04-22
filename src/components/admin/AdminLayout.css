@@ -1,0 +1,191 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5f7;
+}
+
+/* ── Sidebar ─────────────────────────────────────── */
+.admin-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--color-charcoal);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.admin-sidebar__brand {
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-sidebar__logo {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.admin-sidebar__tag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+.admin-sidebar__nav {
+  flex: 1;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  border-radius: 0;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.admin-nav-item:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.9); }
+
+.admin-nav-item--active {
+  background: var(--color-sage) !important;
+  color: var(--color-white) !important;
+}
+
+.admin-nav-item__icon { font-size: 16px; width: 20px; text-align: center; }
+
+.admin-sidebar__footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-sidebar__link {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.15s;
+}
+.admin-sidebar__link:hover { color: rgba(255,255,255,0.8); }
+
+.admin-sidebar__logout {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-body);
+  transition: color 0.15s;
+  padding: 0;
+}
+.admin-sidebar__logout:hover { color: #e57373; }
+
+/* ── Main ────────────────────────────────────────── */
+.admin-main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.admin-page-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--color-charcoal);
+  margin-bottom: 8px;
+}
+
+.admin-page-sub {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: 32px;
+}
+
+/* Shared admin form styles */
+.admin-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  margin-bottom: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  color: var(--color-charcoal);
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: #fafafa; }
+
+.admin-btn {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+}
+
+.admin-btn-primary { background: var(--color-sage); color: white; }
+.admin-btn-primary:hover { background: var(--color-sage-dark); }
+.admin-btn-danger { background: #fdf2f2; color: #c0392b; }
+.admin-btn-danger:hover { background: #fce4e4; }
+.admin-btn-ghost { background: var(--color-cream); color: var(--color-charcoal); border: 1px solid var(--color-border); }
+.admin-btn-ghost:hover { background: var(--color-border); }
+
+.admin-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.admin-badge--new { background: #e8f5e9; color: #2e7d32; }
+.admin-badge--read { background: #f5f5f5; color: #757575; }
+.admin-badge--active { background: #e8f5e9; color: #2e7d32; }
+.admin-badge--inactive { background: #fdf2f2; color: #c0392b; }
+
+@media (max-width: 768px) {
+  .admin-sidebar { display: none; }
+  .admin-main { margin-left: 0; padding: 20px; }
+}

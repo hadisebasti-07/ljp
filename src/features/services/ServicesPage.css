@@ -1,0 +1,204 @@
+.programmes-page {}
+
+/* ── Hero ───────────────────────────────────────── */
+.programmes-hero {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.programmes-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.programmes-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(30,42,43,0.72) 0%, rgba(30,42,43,0.3) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.programmes-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(36px, 5vw, 60px);
+  color: var(--color-white);
+  margin: 12px 0 16px;
+}
+
+.programmes-hero__sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+/* ── Detail Sections ────────────────────────────── */
+.programmes-detail {
+  padding: var(--section-pad);
+  background: var(--color-white);
+}
+
+.prog-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.prog-detail:last-child { border-bottom: none; }
+
+.prog-detail--reverse { direction: rtl; }
+.prog-detail--reverse > * { direction: ltr; }
+
+.prog-detail__photo {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+.prog-detail__type {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.prog-detail__name {
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--color-charcoal);
+  margin-bottom: 12px;
+}
+
+.prog-detail__age-badge {
+  display: inline-block;
+  background: var(--prog-color);
+  color: var(--prog-accent);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.prog-detail__desc {
+  font-size: 16px;
+  color: var(--color-gray);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.prog-detail__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight-item {
+  font-size: 14px;
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.highlight-check {
+  color: var(--color-sage);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.prog-detail__note {
+  margin-top: 20px;
+  background: var(--prog-color);
+  border-left: 3px solid var(--prog-accent);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+}
+
+.prog-detail__note p {
+  font-size: 14px;
+  color: var(--color-gray);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* ── FAQ ────────────────────────────────────────── */
+.services-faq {
+  padding: var(--section-pad);
+  background: var(--color-cream);
+}
+
+.services-faq .section-title { margin-bottom: 36px; }
+
+.faq-list {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item__q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.faq-item__q:hover { color: var(--color-sage-dark); }
+.faq-item--open .faq-item__q { color: var(--color-sage-dark); }
+
+.faq-item__arrow {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-sage);
+  flex-shrink: 0;
+}
+
+.faq-item__a {
+  font-size: 15px;
+  color: var(--color-gray);
+  line-height: 1.75;
+  padding-bottom: 20px;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .prog-detail {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .prog-detail--reverse { direction: ltr; }
+  .prog-detail__photo { height: 300px; }
+}
+
+@media (max-width: 768px) {
+  .programmes-hero { height: 320px; }
+  .prog-detail__photo { height: 240px; }
+}

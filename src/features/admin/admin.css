@@ -1,0 +1,103 @@
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.admin-stat-card {
+  background: var(--stat-bg, var(--color-cream));
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: 1px solid var(--color-border);
+}
+
+.admin-stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.admin-stat-card__icon { font-size: 32px; }
+
+.admin-stat-card__value {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-charcoal);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.admin-stat-card__label {
+  font-size: 13px;
+  color: var(--color-gray);
+  font-weight: 500;
+}
+
+/* Form shared styles */
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.admin-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.admin-field input,
+.admin-field select,
+.admin-field textarea {
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  outline: none;
+  background: var(--color-white);
+  transition: border-color 0.15s;
+}
+
+.admin-field input:focus,
+.admin-field select:focus,
+.admin-field textarea:focus { border-color: var(--color-sage); }
+
+.admin-field textarea { resize: vertical; min-height: 100px; }
+
+.admin-field__hint {
+  font-size: 12px;
+  color: var(--color-gray);
+}
+
+.admin-form-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.admin-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.admin-error {
+  background: #fdf2f2;
+  color: #c0392b;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
+}

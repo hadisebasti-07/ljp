@@ -1,0 +1,125 @@
+.st-page__hero {
+  background: var(--color-cream);
+  padding: 60px 0 48px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.st-page__hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.st-page__back {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray);
+  transition: color 0.15s;
+  width: fit-content;
+}
+.st-page__back:hover { color: var(--color-charcoal); }
+
+.st-page__badge {
+  display: inline-block;
+  background: var(--color-sage-light);
+  color: var(--color-sage-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.st-page__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--color-charcoal);
+  line-height: 1.15;
+}
+
+.st-page__title span {
+  color: var(--color-sage-dark);
+}
+
+.st-page__date {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.st-page__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+.st-page__image-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 96px;
+}
+
+.st-page__image {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.st-page__read-article {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-sage);
+  transition: color 0.15s;
+}
+.st-page__read-article:hover { color: var(--color-sage-dark); }
+
+.st-page__message {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.st-page__message p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+}
+
+.st-page__sign {
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.st-page__sign p {
+  font-size: 15px !important;
+  color: var(--color-gray) !important;
+  line-height: 1.6 !important;
+}
+
+.st-page__sign p strong {
+  color: var(--color-charcoal);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .st-page__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .st-page__image-wrap { position: static; }
+}

@@ -1,0 +1,19 @@
+{
+  "parameters": {
+    "welcome_message": {
+      "defaultValue": {
+        "value": "Welcome to LittleJoy!"
+      },
+      "description": "Homepage welcome message"
+    },
+    "feature_new_dashboard": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "description": "Feature flag for new dashboard UI"
+    }
+  },
+  "version": {
+    "versionNumber": "1"
+  }
+}
