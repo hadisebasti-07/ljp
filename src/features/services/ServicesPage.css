@@ -192,13 +192,24 @@
 @media (max-width: 1024px) {
   .prog-detail {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
+    padding: 48px 0;
   }
   .prog-detail--reverse { direction: ltr; }
   .prog-detail__photo { height: 300px; }
 }
 
 @media (max-width: 768px) {
-  .programmes-hero { height: 320px; }
-  .prog-detail__photo { height: 240px; }
+  .programmes-hero { height: 260px; }
+  .programmes-hero__sub { font-size: 15px; }
+  .prog-detail { padding: 36px 0; }
+  .prog-detail__photo { height: 220px; }
+  .prog-detail__name { font-size: 26px; }
+}
+
+@media (max-width: 480px) {
+  .programmes-hero { height: 220px; }
+  .programmes-hero__title { font-size: 28px; }
+  .programmes-hero__sub { display: none; }
+  .prog-detail__photo { height: 200px; }
 }

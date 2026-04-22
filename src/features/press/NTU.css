@@ -161,11 +161,20 @@
 }
 
 @media (max-width: 768px) {
+  .ntu-page__hero { padding: 40px 0 36px; }
+  .ntu-page__title { font-size: 26px; }
+  .ntu-page__subtitle { font-size: 15px; }
+
   .ntu-page__body {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
     padding-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 56px;
   }
   .ntu-page__image-wrap { position: static; }
+  .ntu-page__what p { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .ntu-page__title { font-size: 22px; }
 }

@@ -122,5 +122,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 
 /* Responsive */
 @media (max-width: 768px) {
-  :root { --section-pad: 60px 20px; }
+  :root { --section-pad: 56px 20px; }
+
+  .btn { padding: 12px 28px; font-size: 14px; }
+
+  .section-title { margin-bottom: 12px; }
+  .section-subtitle { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  :root { --section-pad: 48px 20px; }
 }

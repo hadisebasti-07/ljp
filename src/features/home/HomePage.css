@@ -398,18 +398,30 @@
 
 /* ── Responsive ─────────────────────────────────── */
 @media (max-width: 1024px) {
-  .programmes-preview__grid { grid-template-columns: 1fr; }
-  .locations-grid { grid-template-columns: 1fr 1fr; }
   .philosophy__inner { grid-template-columns: 1fr; gap: 40px; }
   .private-sessions__card { grid-template-columns: 1fr; padding: 40px; gap: 32px; }
+  .locations-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
+  .hero { min-height: auto; padding: 60px 0 48px; }
+  .hero__title { font-size: clamp(32px, 8vw, 48px); }
+  .hero__sub { font-size: 16px; margin-bottom: 28px; }
+  .hero__cta { font-size: 15px; padding: 13px 28px; }
+  .hero__actions { flex-direction: column; align-items: flex-start; }
+
   .programmes-preview__grid { grid-template-columns: 1fr; }
   .locations-grid { grid-template-columns: 1fr 1fr; }
   .cta-banner__inner { flex-direction: column; text-align: center; }
+  .cta-banner__actions { justify-content: center; }
+
+  .private-sessions__card { padding: 28px 24px; }
 }
 
 @media (max-width: 480px) {
+  .hero__actions { width: 100%; }
+  .hero__cta { width: 100%; text-align: center; }
   .locations-grid { grid-template-columns: 1fr; }
+  .hero__blob--1 { width: 260px; height: 260px; }
+  .hero__blob--2 { width: 180px; height: 180px; }
 }

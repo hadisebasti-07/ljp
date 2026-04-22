@@ -214,16 +214,21 @@
 /* ── Responsive ─────────────────────────────────── */
 @media (max-width: 1024px) {
   .about-story__inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-story__quote { position: static; }
   .values-grid { grid-template-columns: 1fr 1fr; }
   .about-approach__inner { grid-template-columns: 1fr; gap: 40px; }
   .news-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
+  .page-hero { padding: 48px 24px 40px; }
   .values-grid { grid-template-columns: 1fr 1fr; }
   .news-grid { grid-template-columns: 1fr; }
+  .about-story__quote { padding: 24px; }
+  .about-story__quote blockquote { font-size: 17px; }
 }
 
 @media (max-width: 480px) {
   .values-grid { grid-template-columns: 1fr; }
+  .news-card__image { height: 160px; }
 }
